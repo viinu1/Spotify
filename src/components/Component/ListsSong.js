@@ -15,8 +15,8 @@ export default function ListsSong() {
     }, [song]);
     return (
         <div className="overflow-y-scroll overflow-x-hidden mt-56 md:w-full md:col-span-2 md:mt-0">
-            <table className="table-auto w-full ">
-                <thead className="text-white h-4">
+            <table className="table-auto w-full">
+                <thead className="text-white h-8 sticky top-0 bg-slate-900">
                     <tr className="text-center text-sm">
                         <td className="w-[10%] ">#</td>
                         <td className="text-left w-[80%]">Title</td>
@@ -26,7 +26,7 @@ export default function ListsSong() {
                         </td>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="mt-8">
                     {dataSongs.map((song) => (
                         <tr
                             key={song.id}

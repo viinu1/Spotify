@@ -12,6 +12,9 @@ export default function Playing() {
     const handleClickPrev = () => {
         handleSetSong(song.id - 1);
     };
+    const handleEnd = () => {
+        handleSetSong(song.id + 1);
+    };
     return (
         <div>
             <AudioPlayer
@@ -22,6 +25,7 @@ export default function Playing() {
                 layout="stacked-reverse"
                 onClickNext={handleClickNext}
                 onClickPrevious={handleClickPrev}
+                onEnded={handleEnd}
             />
         </div>
     );
