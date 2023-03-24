@@ -14,14 +14,14 @@ export default function ListsSong() {
         setIdSong(song.id);
     }, [song]);
     return (
-        <div className="col-span-2 overflow-y-scroll">
+        <div className="overflow-y-scroll overflow-x-hidden mt-56 md:w-full md:col-span-2 md:mt-0">
             <table className="table-auto w-full ">
-                <thead className="text-white h-3">
-                    <tr className="text-center text-xl">
+                <thead className="text-white h-4">
+                    <tr className="text-center text-sm">
                         <td className="w-[10%] ">#</td>
-                        <td className="text-left">Title</td>
-                        <td className="w-[10%]">Author</td>
-                        <td className="w-[10%]">
+                        <td className="text-left w-[80%]">Title</td>
+                        <td className="w-[5%]">Author</td>
+                        <td className="w-[5%]">
                             <i className="fa fa-download"></i>
                         </td>
                     </tr>
@@ -30,7 +30,7 @@ export default function ListsSong() {
                     {dataSongs.map((song) => (
                         <tr
                             key={song.id}
-                            className={`bg-slate-600 h-10 text-gray-300 text-lg hover:bg-slate-900 hover:text-teal-300 
+                            className={`bg-slate-600 h-10 text-gray-300 text-sm hover:bg-slate-900 hover:text-teal-300 
                             ${idSong === song.id && 'bg-slate-900 text-teal-300 '}`}
                             onClick={() => handlePlaySong(song.id)}
                         >
